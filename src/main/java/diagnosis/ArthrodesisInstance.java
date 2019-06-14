@@ -47,20 +47,25 @@ public class ArthrodesisInstance {
     @JsonIgnore
     public Instance getInstance() {
         Instance arthrodesisInstance = new DenseInstance(14);
-        arthrodesisInstance.setValue(0, getProcedures().getC32020023().getOccurrences());
-        arthrodesisInstance.setValue(1, getProcedures().getC52010465().getOccurrences());
-        arthrodesisInstance.setValue(2, getProcedures().getC52250091().getOccurrences());
-        arthrodesisInstance.setValue(3, getProcedures().getC36010022().getOccurrences());
-        arthrodesisInstance.setValue(4, getProcedures().getC25060082().getOccurrences());
-        arthrodesisInstance.setValue(5, getProcedures().getC32020015().getOccurrences());
-        arthrodesisInstance.setValue(6, getProcedures().getC32020066().getOccurrences());
-        arthrodesisInstance.setValue(7, getProcedures().getC36010049().getOccurrences());
-        arthrodesisInstance.setValue(8, getProcedures().getC49030086().getOccurrences());
-        arthrodesisInstance.setValue(9, getProcedures().getC52010392().getOccurrences());
-        arthrodesisInstance.setValue(10, getProcedures().getC49030116().getOccurrences());
-        arthrodesisInstance.setValue(11, getProcedures().getC32020040().getOccurrences());
-        arthrodesisInstance.setValue(12, getProcedures().getC92010016().getOccurrences());
-        arthrodesisInstance.setValue(13, getAge().getNormalized());
+
+        try {
+            arthrodesisInstance.setValue(0, getProcedures().getC32020023().getOccurrences());
+            arthrodesisInstance.setValue(1, getProcedures().getC52010465().getOccurrences());
+            arthrodesisInstance.setValue(2, getProcedures().getC52250091().getOccurrences());
+            arthrodesisInstance.setValue(3, getProcedures().getC36010022().getOccurrences());
+            arthrodesisInstance.setValue(4, getProcedures().getC25060082().getOccurrences());
+            arthrodesisInstance.setValue(5, getProcedures().getC32020015().getOccurrences());
+            arthrodesisInstance.setValue(6, getProcedures().getC32020066().getOccurrences());
+            arthrodesisInstance.setValue(7, getProcedures().getC36010049().getOccurrences());
+            arthrodesisInstance.setValue(8, getProcedures().getC49030086().getOccurrences());
+            arthrodesisInstance.setValue(9, getProcedures().getC52010392().getOccurrences());
+            arthrodesisInstance.setValue(10, getProcedures().getC49030116().getOccurrences());
+            arthrodesisInstance.setValue(11, getProcedures().getC32020040().getOccurrences());
+            arthrodesisInstance.setValue(12, getProcedures().getC92010016().getOccurrences());
+            arthrodesisInstance.setValue(13, getAge().getNormalized());
+        } catch (NullPointerException e) {
+            throw new NullPointerException("Oops, a procedure has not been set. Setup the instance, and try again!");
+        }
 
         return arthrodesisInstance;
     }
