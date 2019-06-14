@@ -1,0 +1,46 @@
+{
+  "procedures" : {
+    "c32020023" : {
+      "occurrences" : 1
+    },
+    "c52010465" : {
+      "occurrences" : 0
+    },
+    "c52250091" : {
+      "occurrences" : 5
+    },
+    "c36010022" : {
+      "occurrences" : 0
+    },
+    "c25060082" : {
+      "occurrences" : 0
+    },
+    "c32020015" : {
+      "occurrences" : 0
+    },
+    "c32020066" : {
+      "occurrences" : 2
+    },
+    "c36010049" : {
+      "occurrences" : 0
+    },
+    "c49030086" : {
+      "occurrences" : 0
+    },
+    "c52010392" : {
+      "occurrences" : 0
+    },
+    "c49030116" : {
+      "occurrences" : 6
+    },
+    "c32020040" : {
+      "occurrences" : 0
+    },
+    "c92010016" : {
+      "occurrences" : 1
+    }
+  },
+  "age" : {
+    "denormalized" : 25.0
+  }
+}
