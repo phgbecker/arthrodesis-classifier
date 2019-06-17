@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 @Getter
@@ -27,8 +28,9 @@ public class Age {
         double proportion = denormalized - minAge;
         double result = proportion / amplitude;
 
-        return Double.valueOf(
-                new DecimalFormat("##.##").format(result)
-        );
+        DecimalFormat resultFormat = new DecimalFormat("##.##");
+        resultFormat.setRoundingMode(RoundingMode.FLOOR);
+
+        return Double.valueOf(resultFormat.format(result));
     }
 }
