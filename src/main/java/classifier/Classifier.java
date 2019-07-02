@@ -1,6 +1,6 @@
 package classifier;
 
-public class InstanceClassification {
+public class Classifier {
 
     public static void main(String[] args) throws Exception {
         ArthrodesisClassifier classifier = new ArthrodesisClassifier();
