@@ -1,6 +1,6 @@
-package diagnosis.attribute;
+package classifier.instance.attribute;
 
-import diagnosis.attribute.procedure.*;
+import classifier.instance.attribute.procedure.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 

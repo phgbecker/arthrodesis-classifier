@@ -1,15 +1,16 @@
-package diagnosis;
+package classifier.instance;
 
+import classifier.instance.attribute.Age;
+import classifier.instance.attribute.Procedures;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import diagnosis.attribute.Age;
-import diagnosis.attribute.Procedures;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import weka.core.DenseInstance;
 import weka.core.Instance;
+import weka.core.Instances;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,8 +46,9 @@ public class ArthrodesisInstance {
     }
 
     @JsonIgnore
-    public Instance getInstance() {
+    public Instance getInstance(Instances dataSet) {
         Instance arthrodesisInstance = new DenseInstance(14);
+        arthrodesisInstance.setDataset(dataSet);
 
         try {
             arthrodesisInstance.setValue(0, getProcedures().getC32020023().getOccurrences());

@@ -1,4 +1,4 @@
-package diagnosis.attribute.procedure;
+package classifier.instance.attribute.procedure;
 
 public class C32020015 extends Procedure {
 

@@ -1,4 +1,4 @@
-package diagnosis.attribute;
+package classifier.instance.attribute;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.EqualsAndHashCode;

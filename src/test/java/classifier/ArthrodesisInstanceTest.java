@@ -1,8 +1,9 @@
-package diagnosis;
+package classifier;
 
-import diagnosis.attribute.Age;
-import diagnosis.attribute.Procedures;
-import diagnosis.attribute.procedure.*;
+import classifier.instance.ArthrodesisInstance;
+import classifier.instance.attribute.Age;
+import classifier.instance.attribute.Procedures;
+import classifier.instance.attribute.procedure.*;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

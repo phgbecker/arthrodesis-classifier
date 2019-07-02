@@ -1,4 +1,4 @@
-package diagnosis.attribute;
+package classifier.instance.attribute;
 
 public enum Diagnosis {
     NEGATIVE(0),
